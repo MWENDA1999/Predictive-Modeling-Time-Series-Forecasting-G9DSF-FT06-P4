@@ -1,0 +1,7 @@
+
+__pycache__
+*.db
+*.pytest_cachegit 
+*.csv
+*.pdf
+*.ipynb_checkpoints
