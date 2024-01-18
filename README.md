@@ -69,5 +69,43 @@ In order to prapare our data for modelling we :
 During EDA, we noticed that the dataset as provided by Zillow comes in "wide format" and for our time series models to run, we had to convert it to "long format." A function was provided to do this. The top 5 zip codes based on %ROI were filtered, and data was grouped by date and zipcode, calculating the mean price for each group selecting from 2012. Home prices and monthly returns of each zipcode were plotted.
 ## 7. Data Modelling and Evaluation
 The data was modeled using statistical time series models, such as ARIMA and SARIMA. The model's performance was evaluated using several metrics, such as Mean Squared Error (MSE) and Return on Investment (ROI).
-## 8. Conclusion and Recommendations
-The ARIMA and SARIMA models were evaluated using MSE and ROI%, and the top 5 zip codes to invest in were identified. The findings of this project can be used by Naruto Investments to make informed investment decisions in the real estate market.
+## 8. Recommendations
+1. **Optimal Zip Codes for Investment:**
+   - 89034 (Mesquite, Nevada)
+   - 98684 (Vancouver, Washington)
+   - 89146 (Las Vegas, Nevada)
+   - 89015 (Henderson, Nevada)
+   - 89124 (Las Vegas, Nevada)
+  
+   These zip codes showcase the highest Return on Investment (ROI) and are recommended for investors seeking promising opportunities.
+
+2. **Preferred Counties for Investment:**
+   - Clark County
+   - Allegheny County
+   - Fulton County
+   - Kings County
+   - Indian River County
+
+   Investing in real estate within these counties is recommended, offering diverse opportunities and potential for robust returns.
+
+3. **Strategic Timing:**
+   - While no clear seasonal patterns were identified, the overall upward trend suggests that the real estate market is favorable for investment. Investors are advised to consider the long-term growth potential rather than specific timing considerations.
+## 9. **Next Steps:**
+
+1. **Implementation of Predictive Model:**
+   Integrate the predictive time series model into investment strategies, using it as a valuable tool for making informed decisions and optimizing portfolio performance.
+
+2. **Detailed Due Diligence:**
+   Conduct a comprehensive due diligence process, including property inspections, market analysis, and local economic factors, to further refine investment decisions and mitigate risks.
+
+3. **Diversification Strategies:**
+   Explore diversification strategies within the recommended zip codes and counties, spreading investments across different property types and neighborhoods to enhance portfolio resilience.
+
+4. **Continuous Monitoring:**
+   Stay abreast of market trends, economic indicators, and any emerging patterns to adapt investment strategies accordingly. Regularly update the predictive model with new data for improved forecasting accuracy.
+
+By following these recommendations and next steps, investors can position themselves strategically in the real estate market, capitalize on identified opportunities, and navigate the dynamic landscape with confidence.
+## 10. CONCLUSION
+* The study identified the most promising zip codes and counties for real estate investment. The data indicated a positive trend in real estate value over time, but no clear seasonal pattern was observed
+
+* The project concluded that the best zip codes to invest in are 89034, 98684, 89146, 89015, and 89124. The best counties to invest in are Clark County, Allegheny, Fulton County, Kings County, and Indian River County. The data showed an upward trend in real estate value over time, but there was no clear seasonality pattern to determine the best time period to invest in real estate. A predictive time series model was created to help predict future real estate values.
