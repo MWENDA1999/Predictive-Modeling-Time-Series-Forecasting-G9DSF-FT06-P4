@@ -1,7 +1,5 @@
 # Predictive Time Series Modelling for Real Estate Investment using Zillow Research Data
-<p align="center">
-  <img width="600" src="https://github.com/MWENDA1999/Predictive-Modeling-Time-Series-Forecasting-G9DSF-FT06-P4/blob/main/image/Cover1.jpg" alt="Predictive Time Series Modelling for Real Estate Investment">
-</p>
+![image](https://github.com/MWENDA1999/Predictive-Modeling-Time-Series-Forecasting-G9DSF-FT06-P4/blob/main/Image/cover1.jpg)
 
 This repository contains the code and analysis for developing a predictive time series model for real estate investment using Zillow research data. The project's goal is to provide Zamara Investment firm with solid recommendations for the top 5 best zip codes to invest in.
 
