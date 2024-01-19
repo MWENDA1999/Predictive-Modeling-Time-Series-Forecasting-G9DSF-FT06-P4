@@ -1,12 +1,12 @@
 # Predictive Time Series Modelling for Real Estate Investment using Zillow Research Data
 <p align="center">
-  <img width="600" src="https://github.com/MWENDA1999/Predictive-Modeling-Time-Series-Forecasting-G9DSF-FT06-P4/blob/main/Cover.jpg" alt="Predictive Time Series Modelling for Real Estate Investment">
+  <img width="600" src="https://github.com/MWENDA1999/Predictive-Modeling-Time-Series-Forecasting-G9DSF-FT06-P4/blob/main/Cover1.png" alt="Predictive Time Series Modelling for Real Estate Investment">
 </p>
 
-This repository contains the code and analysis for developing a predictive time series model for real estate investment using Zillow research data. The project's goal is to provide Naruto Investment firm with solid recommendations for the top 5 best zip codes to invest in.
+This repository contains the code and analysis for developing a predictive time series model for real estate investment using Zillow research data. The project's goal is to provide Zamara Investment firm with solid recommendations for the top 5 best zip codes to invest in.
 
 ## 1. Introduction
-Real estate is a significant component of most people's wealth, and this is especially true for American homeowners. However, the real estate market is influenced by various variables that can make it challenging for investors to choose the right investment opportunities. To help investors in this process, Naruto Consultants aims to develop a predictive time series model.
+Real estate is a significant component of most people's wealth, and this is especially true for American homeowners. However, the real estate market is influenced by various variables that can make it challenging for investors to choose the right investment opportunities. To help investors in this process, we aim to develop a predictive time series model.
 
 ## 2. Business Understanding
 Real estate comprises of land, buildings, and physical properties, with applications in residential, commercial, industrial, and agricultural sectors. It plays a pivotal role in the global economy, contributing significantly to the Gross Domestic Product (GDP).
@@ -24,20 +24,20 @@ Specific Objectives:
 * Identify and understand seasonal patterns influencing real estate prices in different zip codes.
 * Evaluate which city exhibits the most promising real estate investment opportunities.
 * Forecast property values over the short and long term, aiming to identify the most favorable zip codes for investment.
-Metric of Success
+
+Metric of Success:
 The model's success will be measured by achieving a Root Mean Squared Error (RMSE) of less than 5%, coupled with the identification of the zip codes yielding the highest Return on Investment (ROI).
 
 ## 3. Notebook Structure
 The Python notebook is structured as follows:
-- Data cleaning
-- External Data Validation
+- Data Understanding
+- Data Preparation
 - Exploratory Data Analysis
 - Data Preprocessing
-- Data Modelling and Evaluation
+- Modelling and Evaluation
 - Conclusion and Recommendations
 
 ## 4. Data Understanding
-The Data
 The dataset is sourced from Zillow Research, a reputable and widely used platform for real estate market data. The dataset is stored in the file zillow_data.csv within the project repository. The dataset contains 14723 rows and 272 columns.
 The Zillow dataset provides detailed real estate data, with each row representing a unique zip code. Here's an overview of the dataset structure:
 * RegionID: A unique identifier for each region.
@@ -51,25 +51,26 @@ The Zillow dataset provides detailed real estate data, with each row representin
 
 ## 5. Data Preparation
 In order to prapare our data for modelling we :
-1. Reshaped the data from wide to long format. Looking at the format of the data in zillow_data.csv, we noticed that the actual Time Series values are stored as separate columns.
-     This is a wide format which makes the dataframe intuitive and easy to read. However, there are problems with this format when it comes to actually learning from the data, because the data only makes sense if you know the name of the column that the data can be found it. In order to pass this data to our model, we'll reshape our dataset to long format. Our dataframe now appears as shown below:
+1. Reshaped the data from wide to long format. 
 2. We coverted the ‘Date’ column to datetime format to enable easy manipulation of date and time information.
-3. Slicing the data. We sliced our DataFrame to remain with the most recent data which is relevant for our analysis. This is because it reflects the current trends and market conditions more accurately. By focusing on the last 10 years, we can analyze data that is more representative of current market forces.
-4. Perform Feature Engineering- We created a column with the Return On Investment(ROI), we will use this to determine the best county to choose zipcodes from.m
-5. Check for missing values and handle them. Checking the dataframe info, we find that we have missing values in the ‘Metro’ and ‘Price’ columns. We fill the ‘Metro’ column with ‘missing’ and fill the missing price values using linear interpolation.
+3. Slicing the data. 
+4. Perform Feature Engineering.
+5. Check for missing values and handle them. 
 
 ## 6. Exploratory Data Analysis and Data Preprocessing
 * We performed trend analysis to identify and understand the underlying trends of the time series data.
-* We also examined the stationarity of the time series. In time series modeling, it's commonly assumed that the data exhibits stationarity. This means that the statistical properties such as mean, variance, and autocorrelation of the series remain constant over time. Stationary data simplifies the modeling process significantly. 
-* To verify if the time series data is stationary, techniques like the Dickey-Fuller test were employed along with examining the rolling mean. 
-* Since the data turned out to be non-stationary, a method known as differencing was applied. Differencing helped in transforming the data into a stationary form, which is more conducive for time series modeling.
-* ROI stands for Return on Investment, which is a measure of how much profit or loss a business makes from its investment. A higher ROI means a higher profit and a lower ROI means a lower profit or a loss.
-* Monthly ROI is the ROI calculated for each month, based on the difference between the property value at the beginning and the end of the month, divided by the initial value, and the graph is plotted as shown below:
-## 7. Data Preprocessing
-During EDA, we noticed that the dataset as provided by Zillow comes in "wide format" and for our time series models to run, we had to convert it to "long format." A function was provided to do this. The top 5 zip codes based on %ROI were filtered, and data was grouped by date and zipcode, calculating the mean price for each group selecting from 2012. Home prices and monthly returns of each zipcode were plotted.
+* We also examined the stationarity of the time series. To verify if the time series data is stationary, techniques like the Dickey-Fuller test were employed along with examining the rolling mean. 
+* Since the data turned out to be non-stationary, a method known as differencing was applied. Differencing helped in transforming the data into a stationary form, which is more condusive for time series modeling.
+
 ## 7. Data Modelling and Evaluation
-The data was modeled using statistical time series models, such as ARIMA and SARIMA. The model's performance was evaluated using several metrics, such as Mean Squared Error (MSE) and Return on Investment (ROI).
-## 8. Recommendations
+The data was modeled using statistical time series models ARIMA, SARIMA and prophet. The model's performance was evaluated using several metrics, such as Root Mean Squared Error (RMSE) and Return on Investment (ROI).
+
+## 8. CONCLUSION
+* The study identified the most promising zip codes and counties for real estate investment. The data indicated a positive trend in real estate value over time, but no clear seasonal pattern was observed
+
+* The project concluded that the best zip codes to invest in are 89034, 98684, 89146, 89015, and 89124. The best counties to invest in are Clark County, Allegheny, Fulton County, Kings County, and Indian River County. The data showed an upward trend in real estate value over time, but there was no clear seasonality pattern to determine the best time period to invest in real estate. A predictive time series model was created to help predict future real estate values.
+
+## 9. Recommendations
 1. **Optimal Zip Codes for Investment:**
    - 89034 (Mesquite, Nevada)
    - 98684 (Vancouver, Washington)
@@ -90,7 +91,8 @@ The data was modeled using statistical time series models, such as ARIMA and SAR
 
 3. **Strategic Timing:**
    - While no clear seasonal patterns were identified, the overall upward trend suggests that the real estate market is favorable for investment. Investors are advised to consider the long-term growth potential rather than specific timing considerations.
-## 9. **Next Steps:**
+
+## 10. **Next Steps:**
 
 1. **Implementation of Predictive Model:**
    Integrate the predictive time series model into investment strategies, using it as a valuable tool for making informed decisions and optimizing portfolio performance.
@@ -103,9 +105,3 @@ The data was modeled using statistical time series models, such as ARIMA and SAR
 
 4. **Continuous Monitoring:**
    Stay abreast of market trends, economic indicators, and any emerging patterns to adapt investment strategies accordingly. Regularly update the predictive model with new data for improved forecasting accuracy.
-
-By following these recommendations and next steps, investors can position themselves strategically in the real estate market, capitalize on identified opportunities, and navigate the dynamic landscape with confidence.
-## 10. CONCLUSION
-* The study identified the most promising zip codes and counties for real estate investment. The data indicated a positive trend in real estate value over time, but no clear seasonal pattern was observed
-
-* The project concluded that the best zip codes to invest in are 89034, 98684, 89146, 89015, and 89124. The best counties to invest in are Clark County, Allegheny, Fulton County, Kings County, and Indian River County. The data showed an upward trend in real estate value over time, but there was no clear seasonality pattern to determine the best time period to invest in real estate. A predictive time series model was created to help predict future real estate values.
